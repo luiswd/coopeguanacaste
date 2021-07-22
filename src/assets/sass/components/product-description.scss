@@ -1,0 +1,84 @@
+/*------------------*
+# Product Description
+*------------------*/
+
+.productDescription{
+    .product{
+        border: 1px solid $color-black;
+        border-radius: 40px;
+        display: flex;
+        margin-bottom: 16px;
+        padding: 50px 0;
+
+        &.telefonia{
+            background: url('../../images/background_telefonia.svg') no-repeat center center;
+            background-size: 100%;
+
+            img{
+                max-width: 291px;
+            }
+        }
+
+        &.internet{
+            background: url('../../images/background_internet.svg') no-repeat center center;
+            background-size: 100%;
+        }
+
+        &.television{
+            background: url('../../images/background_television.svg') no-repeat center center;
+            background-size: 100%;
+        }
+
+        &-content{
+            max-width: 440px;
+            h2{
+                font-size: rem(45px);
+                line-height: rem(51px);
+
+                &.title{
+                    color: $color-purple;
+                }
+
+                &.subtitle{
+                    margin-bottom: 35px;
+                }
+            }
+            .copy{
+                margin-bottom: 35px;
+            }
+
+            .cta{
+                display: flex;
+                align-items: center;
+                padding-left: 23px;
+                width: 140px;
+                height: 43px;
+                border-radius: 10px;
+                color: $color-white;
+                font-size: rem(14px);
+                background: $color-purple url('../../images/icon_arrow-right.svg') no-repeat right 22px center;
+            }
+        }
+
+        &-ilustration{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            img{
+                width: 100%;
+                max-width: 500px;
+            }
+        }
+
+        &-left,
+        &-right{
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            align-content: center;
+            flex-direction: column;
+            flex-wrap: nowrap;
+        }
+    }
+}

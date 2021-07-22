@@ -1,0 +1,232 @@
+/*------------------*
+# Nav
+*------------------*/
+
+.header{
+    padding-top: 20px;
+    margin-bottom: 20px;
+    position: relative;
+
+    .menu-container{
+        padding: 107px 0 0 7vw;
+        position: fixed;
+        z-index: 999;
+        background: rgb(205,183,253);
+        background: linear-gradient(180deg, rgba(205,183,253,1) 0%, rgba(252,166,93,1) 50%, rgba(158,113,250,1) 100%);
+        top: 148px;
+        bottom: 0;
+        left: 2vw;
+        right: 2vw;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-content: flex-start;
+        border: 1px solid $color-black;
+        border-radius: 10px;
+
+        .menu-column{
+            position: relative;
+
+            &:last-child{
+                padding-left: 22vw;
+            }
+        }
+
+        .ilustrations{
+            img + img{
+                position: absolute;
+                top: 180px;
+                left: 7vw;
+            }
+        }
+
+        .important-links{
+            list-style: none;
+            li{
+                a{
+                    font-size: rem(104px);
+                    line-height: rem(119px);
+                    font-family: 'gt_walsheim_probold';
+                    color: $color-black;
+
+                    &:hover{
+                        color: $color-orange;
+                    }
+                }
+
+                &.active{
+                    color: $color-orange;
+                    sup{
+                        color: $color-black;
+                    }
+                }
+
+                sup{
+                    top: -57px;
+                    font-size: rem(22px);
+                    line-height: rem(25px);
+                    font-family: 'gt_walsheim_proregular';
+                    margin-right: 25px;
+                }
+            }
+        }
+
+        .secondary-links{
+            list-style: none;
+            padding-top: 150px;
+            li{
+                margin-bottom: rem(13px);
+                a{
+                    display: block;
+                    font-size: rem(17px);
+                    line-height: rem(19px);
+                    color: $color-black;
+                }
+            }
+        }
+    }
+
+    &-contact{
+        display: flex;
+        list-style: none;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+        list-style: none;
+        margin-bottom: 18px;
+        li{
+            margin-left: 30px;
+            a{
+                display: inline-block;
+                padding-left: 20px;
+                font-size: rem(11px);
+                text-transform: uppercase;
+                text-decoration: none;
+                color: $color-black;
+            }
+        }
+
+        &__facebook{
+            a{
+                background: url('../../images/facebook_nav.svg') no-repeat center left;
+                padding-top: 5px;
+            }
+        }
+        &__phone{
+            a{
+                background: url('../../images/phone_nav.svg') no-repeat center left;
+            }
+        }
+        &__whatsapp{
+            a{
+                background: url('../../images/whatsapp_nav.svg') no-repeat center left;
+            }
+        }
+    }
+
+    .navigation{
+        border: 1px solid $color-black;
+        border-radius: 10px;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        justify-content: space-between;
+
+        &-left{
+            width: 66%;
+            padding: 10px 18px;
+            border-right: 1px solid;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-items: center;
+            justify-content: space-between;
+
+            ul{
+                list-style: none;
+
+                li{
+                    display: inline-block;
+
+                    a{
+                        color: $color-black;
+                        padding-left: 26px;
+                        min-width: 30px;
+                        font-size: rem(11px);
+                        margin-left: 30px;
+                        display: block;
+                    }
+
+                    .login{
+                        background: url('../../images/icon_login.svg') no-repeat center left;
+
+                    }
+
+                    .register{
+                        background: url('../../images/icon_register.svg') no-repeat center left;
+                    }
+
+                    .cart{
+                        background: url('../../images/icon_cart.svg') no-repeat center left;
+                    }
+                }
+            }
+        }
+
+        &-right{
+            width: 34%;
+            padding: 10px 18px 10px 0;
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            align-content: center;
+            align-items: center;
+            justify-content: space-evenly;
+
+            .icon.menu{
+                background: url('../../images/icon_menuBurguer.svg') no-repeat center left;
+                height: 13px;
+                width: 34px;
+                display: inline-block;
+                margin-bottom: 5px;
+
+                &.close{
+                    background: url('../../images/closeMenu.svg') no-repeat center left;
+                }
+            }
+        }
+
+        .button{
+            height: 43px;
+            width: 150px;
+            border-radius: 10px;
+            color: $color-white;
+            font-size: rem(14px);
+            padding: 13px 22px;
+
+            &-menu{
+                display: flex;
+                flex-direction: column;
+                font-size: rem(13px);
+                color: $color-black;
+                margin: 0 55px;
+                font-size: rem(13px);
+                line-height: rem(14px);
+            }
+
+            &-planes{
+                background: url('../../images/icon_wifi.svg') no-repeat right 22px center;
+                background-color: $color-orange;
+                width: 134px;
+                margin-right: 16px;
+            }
+
+            &-contrata{
+                background: url('../../images/icon_chat.svg') no-repeat right 22px center;
+                background-color: $color-purple;
+            }
+        }
+
+    }
+}

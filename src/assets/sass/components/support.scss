@@ -1,0 +1,91 @@
+/*------------------*
+# Support
+*------------------*/
+
+.support{
+    margin-top: rem(20px);
+    margin-bottom: rem(20px);
+    &-grid{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    &-box{
+        width: 33.333%;
+        padding: rem(35px) 2.1vw;
+        border: 1px solid $color-black;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-content: flex-end;
+        align-items: flex-end;
+        .title{
+            font-size: rem(33px);
+            line-height: rem(32px);
+            margin-bottom: rem(29px);
+            max-width: 272px;
+        }
+
+        .subtitle{
+            font-size: rem(20px);
+            line-height: rem(20px);
+            margin-bottom: rem(33px);
+        }
+
+        .copy{
+            font-size: rem(18px);
+            line-height: rem(28px);
+            margin-bottom: rem(18px);
+
+            strong{
+                font-family: 'gt_walsheim_probold';
+            }
+        }
+
+        .support-link{
+            float: right;
+            display: block;
+            padding-right: 20px;
+            position: relative;
+            font-size: rem(17px);
+            line-height: rem(27px);
+            color: $color-black;
+            margin-top: rem(20px);
+            &::after{
+                content: '';
+                display: block;
+                height: 14px;
+                width: 10px;
+                position: absolute;
+                top: 6px;
+                right: 0;
+                background: url('../../images/arrow-top.svg') no-repeat right top;
+                transform: rotate(180deg);
+            }
+        }
+
+        &:nth-child(1){
+            border-radius: 40px 0 0;
+        }
+        &:nth-child(2){
+            border-left: none;
+        }
+
+        &:nth-child(3){
+            border-radius: 0 40px 0 0;
+            border-left: none;
+        }
+
+        &:nth-child(4){
+            border-radius: 0 0 0 40px;
+            border-top: none;
+        }
+
+        &:nth-child(5){
+            border-top: none;
+            border-left: none;
+        }
+    }
+}

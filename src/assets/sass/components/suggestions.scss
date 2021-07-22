@@ -1,0 +1,91 @@
+/*------------------*
+# Suggestions
+*------------------*/
+
+.suggestions{
+    margin-bottom: 20px;
+    .header{
+        margin-bottom: rem(44px);
+        .title{
+            font-size: rem(60px);
+            line-height: rem(68px);
+            margin: 64px auto;
+            text-align: left;
+            max-width: 1090px;
+            margin: 0 auto;
+            span{
+                color: $color-orange;
+            }
+        }
+    }
+
+    &-list{
+        
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+
+    }
+
+    &-card{
+        width: 100%;
+        max-width: 322px;
+        position: relative;
+        margin: 0 30px;
+
+        &:hover{
+            .back{
+                opacity: 1;
+            }
+        }
+
+        .front{
+            position: relative;
+            display: flex;
+            img{
+                width: 100%;
+            }
+
+            .title{
+                position: absolute;
+                bottom: 21px;
+                left: 21px;
+                color: $color-white;
+            }
+        }
+
+        .back{
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: white;
+            background-color: $color-purple;
+            border-radius: 10px;
+            height: 100%;
+            padding: 33px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            opacity: 0;
+
+            -webkit-transition: all 0.5s 0s ease;
+            -moz-transition: all 0.5s 0s ease;
+            -o-transition: all 0.5s 0s ease;
+            transition: all 0.5s 0s ease;
+
+            .copy{
+                font-size: rem(19px);
+                line-height: rem(36px);
+            }
+
+            .source{
+                font-size: rem(21px);
+                line-height: rem(36px);
+                font-weight: bold;
+            }
+        }
+    }
+}

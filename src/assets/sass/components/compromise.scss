@@ -1,0 +1,70 @@
+/*------------------*
+# Compromise
+*------------------*/
+
+.compromise{
+    margin-top: rem(20px);
+    &Box{
+        border: 1px solid $color-black;
+        border-radius: 40px;
+        padding: rem(70px) 3.5vw 0;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+
+        &-left,
+        &-right{
+            width: 50%;
+        }
+        &-left{
+            width: 70%;
+            align-self: flex-end;
+            h2{
+                font-size: rem(60px);
+                line-height: rem(68px);
+                max-width: 390px;
+                margin-bottom: rem(22px);
+            }
+
+            p{
+                font-size: rem(20px);
+                line-height: rem(32px);
+                max-width: 445px;
+                margin-bottom: rem(30px);
+            }
+
+            figure{
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                align-content: center;
+                justify-content: flex-end;
+                align-items: center;
+                img{
+                    max-width: 83px;
+                }
+                max-width: 445px;
+            }
+
+        }
+        &-right{
+            right: 30%;
+            align-self: flex-start;
+            padding-bottom: 5.125rem;
+
+            p:first-child{
+                margin-bottom: rem(30px);
+            }
+
+            p{
+                font-size: rem(20px);
+                line-height: rem(32px);
+                max-width: 464px;
+            }
+        }
+    }
+}

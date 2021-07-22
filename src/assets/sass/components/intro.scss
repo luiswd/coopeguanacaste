@@ -1,0 +1,162 @@
+/*------------------*
+# Intro
+*------------------*/
+
+.intro{
+    &.intro-support{
+        .introBox{
+            padding-bottom: 0;
+            &-right{
+                align-self: flex-end;
+            }
+            &-left{
+                padding-bottom: rem(70px);
+                p{
+                    max-width: 430px;
+                }
+            }
+        }
+    }
+    &.intro-enterprise{
+        .introBox{
+            &-left{
+                h2{
+                    max-width: 382px;
+                }
+                p{
+                    max-width: 454px;
+                }
+            }
+        }
+    }
+    &.intro-services{
+        .introBox{
+            &-left{
+                h2{
+                    max-width: 460px;
+                }
+                p{
+                    max-width: 421px;
+                }
+            }
+        }
+    }
+
+    &.intro-us{
+        .introBox{
+            &-left{
+                p{
+                    max-width: 486px;
+                }
+            }
+
+            &-right{
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    &.intro-guide{
+        .introBox{
+            &-left{
+                h2{
+                    max-width: 590px;
+                }
+                p{
+                    max-width: 400px;
+                }
+            }
+        }
+    }
+
+    &.intro-tv{
+        .introBox{
+            &-left{
+                h2{
+                    max-width: 580px;
+                }
+                p{
+                    max-width: 508px;
+                }
+            }
+        }
+    }
+
+    &.intro-coverage{
+        .introBox{
+            &-left{
+                h2{
+                    max-width: 390px;
+                }
+                p{
+                    max-width: 430px;
+                }
+            }
+        }
+    }
+
+    &.intro-projects{
+        .introBox{
+            padding-bottom: 0;
+            &-right{
+                align-self: flex-end;
+            }
+            &-left{
+                padding-bottom: rem(70px);
+                p{
+                    max-width: 430px;
+                }
+            }
+        }
+    }
+    &Box{
+        border: 1px solid $color-black;
+        border-radius: 10px 10px 40px 40px;
+        padding: rem(70px) 3.5vw;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+
+        &-left,
+        &-right{
+            width: 50%;
+        }
+        &-left{
+            h2{
+                font-size: rem(50px);
+                line-height: rem(50px);
+                max-width: 572px;
+                margin-bottom: rem(33px);
+            }
+
+            p{
+                font-size: rem(20px);
+                line-height: rem(32px);
+                max-width: 340px;
+                margin-bottom: rem(10px);
+            }
+        }
+        &-right{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+
+            img{
+                width: auto;
+            }
+
+            &.center{
+
+            }
+        }
+    }
+}

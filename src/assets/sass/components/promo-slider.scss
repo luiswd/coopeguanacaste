@@ -1,0 +1,144 @@
+.promo-slider{
+    .slick-dots{
+        top: 50px;
+        left: 4vw;
+        width: auto;
+        bottom: auto;
+
+        li{
+            button{
+                color: $color-black;
+                font-size: rem(15px);
+                border-radius: 100%;
+                &::before{
+                    display: none;
+                }
+            }
+        }
+
+        .slick-active{
+            button{
+                border: 1px solid $color-black;
+            }
+        }
+    }
+
+    &-slick{
+        border: 1px solid $color-black;
+        border-radius: 10px 10px 40px 40px;
+
+        &.slick-dotted.slick-slider{
+            margin-bottom: 20px;
+        }
+    }
+
+    .promo{
+        height: 585px;
+        display: flex;
+        margin-bottom: 16px;
+
+        &-content{
+            h2{
+                font-size: rem(50px);
+                line-height: rem(60px);
+
+                &.title{
+                    color: $color-purple;
+                }
+
+                &.subtitle{
+                    margin-bottom: 35px;
+                }
+            }
+            .copy{
+                margin-bottom: 35px;
+            }
+
+            .price{
+                color: $color-orange;
+                font-family: 'gt_walsheim_probold';
+                font-size: rem(45px);
+                line-height: rem(40px);
+                margin-bottom: 38px;
+                
+                strong{
+                    font-size: rem(65px);
+                    line-height: rem(60px);
+                }
+
+                span{
+                    font-size: rem(19px);
+                    line-height: rem(30px);
+                    color: $color-black;
+                }
+            }
+
+            .cta{
+                display: inline-flex;
+                align-items: center;
+                padding: 0 50px 0 23px;
+                width: auto;
+                height: 43px;
+                border-radius: 10px;
+                color: $color-white;
+                font-size: rem(14px);
+                background: $color-purple url('../../images/icon_arrow-right.svg') no-repeat right 22px center;
+            }
+        }
+
+        &-ilustration{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+            img{
+                width: 100%;
+                max-width: 500px;
+            }
+        }
+
+        &-left,
+        &-right{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            align-content: center;
+            flex-direction: column;
+            flex-wrap: nowrap;
+        }
+
+        &-right{
+            width: 55%;
+        }
+
+        &-left{
+            align-items: flex-start;
+            padding-left: 4.5vw;
+            width: 45%;
+        }
+    }
+}
+
+.banner-slider{
+    padding: 50px 0;
+    &-slick{
+        display: flex;
+    }
+    &__item{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+
+        p{
+            font-size: rem(64px);
+            margin: 0 50px;
+            font-family: 'gt_walsheim_probold';
+        }
+    }
+}

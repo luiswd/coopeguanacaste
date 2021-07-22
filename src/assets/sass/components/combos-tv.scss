@@ -1,0 +1,46 @@
+/*------------------*
+# Combos TV
+*------------------*/
+
+.combos.tv{
+    margin-top: rem(20px);
+    background: transparent;
+    padding-bottom: 0;
+    margin-bottom: rem(20px);
+    .combosBox{
+        border: 1px solid $color-black;
+        border-radius: 40px;
+        padding: rem(70px) 3.5vw;
+    }
+
+    .header{
+        .title{
+            margin-top: 0;
+        }
+    }
+
+    .slick-prev{
+        left: -70px;
+    }
+    .slick-prev{
+        right: -70px;
+    }
+
+    .combos-disclaimer{
+        text-align: center;
+        padding-top: rem(60px);
+        max-width: 900px;
+        margin: 0 auto;
+
+        p{
+            margin-bottom: rem(30px);
+            color: $color-gray;
+        }
+
+        .title{
+            margin-bottom: rem(20px);
+            color: $color-black;
+            font-family: 'gt_walsheim_probold';
+        }
+    }
+}

@@ -1,0 +1,92 @@
+/*------------------*
+# Recharge
+*------------------*/
+
+.recharge{
+    &Box{
+        border: 1px solid $color-black;
+        border-radius: 40px;
+        padding: rem(78px) 2.4vw rem(78px)  5.4vw;
+        margin-top: rem(20px);
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-content: flex-start;
+        justify-content: center;
+        align-items: flex-start;
+
+        &-left{
+            padding-top: rem(13px);
+            width: 43%;
+            img{
+                max-width: 466px;
+                margin-bottom: 43px;
+            }
+            h3,
+            p{
+                font-size: rem(35px);
+                line-height: rem(50px);
+            }
+            h3{
+                color: $color-orange;
+            }
+        }
+        &-right{
+            width: 57%;
+            h2{
+                font-size: rem(60px);
+                line-height: rem(68px);
+                max-width: 390px;
+                margin-bottom: rem(91px);
+            }
+            ul{
+                list-style: none;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                max-width: 720px;
+                margin-bottom: rem(20px);
+
+                li{
+                    border: 1px solid $color-black;
+                    width: 50%;
+                    height: 347px;
+                    padding: 22px 29px;
+
+                    h3{
+                        margin-bottom: rem(24px);
+                        font-size: rem(25px);
+                        line-height: rem(28px);
+                    }
+
+                    p{
+                        font-size: rem(17px);
+                        line-height: rem(27px);
+                    }
+
+                    &:nth-child(1){
+                        border-right: none;
+                        border-bottom: none;
+                    }
+                    &:nth-child(2){
+                        border-bottom: none;
+                    }
+                    &:nth-child(3){
+                        border-right: none;
+                    }
+                }
+            }
+            .copy{
+                font-size: rem(24px);
+                line-height: rem(38px);
+                margin-bottom: rem(10px);
+            }
+            .disclosure{
+                font-size: rem(17px);
+                line-height: rem(27px);
+                color: $color-red;
+            }
+        }
+    }
+}

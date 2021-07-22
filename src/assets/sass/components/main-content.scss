@@ -1,0 +1,23 @@
+/*------------------*
+# Main Content
+*------------------*/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+.wrapper{
+    padding: 0 2vw;
+}
+
+body{
+    background: rgb(220,204,255);
+    background: linear-gradient(180deg, rgba(220,204,255,1) 0%, rgba(255,255,255,1) 10%, rgba(255,255,255,1) 100%);
+}

@@ -1,0 +1,69 @@
+/*------------------*
+# Headings
+*------------------*/
+
+/*
+ * Uniform spacing and color for headings
+*/
+
+h1, h2, h3, h4, h5, h6 {
+    color: $color-black;
+}
+
+/*
+ * Heading font sizes
+*/
+
+h1 {
+    font-size: $h1-size;
+}
+
+h2 {
+    font-size: $h2-size;
+    font-family: 'gt_walsheim_probold';
+}
+
+h3 {
+    font-size: $h3-size;
+}
+
+h4 {
+    font-size: $h4-size;
+}
+
+h5 {
+    font-size: $h5-size;
+}
+
+h6 {
+    font-size: $h6-size;
+}
+
+p{
+    font-size: rem(17px);
+    line-height: rem(27px);
+}
+
+@font-face {
+    font-family: 'gt_walsheim_probold';
+    src: url('../../fonts/gtwalsheimpro-bold-webfont.woff2') format('woff2'),
+    url('../../fonts/gtwalsheimpro-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'gt_walsheim_promedium';
+    src: url('../../fonts/gtwalsheimpro-medium-webfont.woff2') format('woff2'),
+    url('../../fonts/gtwalsheimpro-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'gt_walsheim_proregular';
+    src: url('../../fonts/gtwalsheimpro-regular-webfont.woff2') format('woff2'),
+    url('../../fonts/gtwalsheimpro-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

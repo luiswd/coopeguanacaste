@@ -1,0 +1,70 @@
+/*------------------*
+# Accordion
+*------------------*/
+
+.accordion{
+    margin: rem(20px) 0;
+    &-wrapper{
+        width: 75%;
+    }
+    &Box{
+        border: 1px solid $color-black;
+        border-radius: 40px;
+        padding: rem(70px) 3.5vw;
+
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+
+        .title{
+            text-align: center;
+            font-size: rem(40px);
+            line-height: rem(50px);
+            padding-top: rem(35px);
+            margin-bottom: rem(112px);
+        }
+
+        /* Style the buttons that are used to open and close the accordion panel */
+        .collapse {
+            cursor: pointer;
+            width: 100%;
+            text-align: left;
+            border: none;
+            outline: none;
+            transition: 0.4s;
+            padding-bottom: rem(10px);
+            border-bottom: 1px solid $color-black;
+            background-color: $color-white;
+            font-size: rem(30px);
+            line-height: rem(48px);
+            margin-bottom: rem(30px);
+
+            &.active + .panel{
+                margin-bottom: rem(60px);
+            }
+        }
+        
+        /* Style the accordion panel. Note: hidden by default */
+        .panel {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            font-size: rem(17px);
+            line-height: rem(27px);
+        }
+
+        .collapse:after {
+            content: '+'; /* Unicode character for "plus" sign (+) */
+            font-size: rem(49px);
+            color: $color-black;
+            float: right;
+            margin-left: 5px;
+        }
+        .active:after {
+            content: "-"; /* Unicode character for "minus" sign (-) */
+        }
+    }
+}

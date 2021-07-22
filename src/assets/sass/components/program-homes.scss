@@ -1,0 +1,83 @@
+/*------------------*
+# Program Homes
+*------------------*/
+
+.programHomes{
+    margin-top: rem(20px);
+    &Box{
+        border: 1px solid $color-black;
+        border-radius: 40px;
+        padding: rem(70px) 3.5vw;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+
+        &-left,
+        &-right{
+            width: 50%;
+        }
+        &-left{
+            width: 55%;
+            align-self: flex-start;
+            img{
+                max-width: 582px;
+            }
+        }
+        &-right{
+            width: 45%;
+            h2{
+                font-size: rem(60px);
+                line-height: rem(68px);
+                margin-bottom: rem(25px);
+                width: 360px;
+            }
+
+            h3{
+                margin-top: rem(50px);
+                margin-bottom: rem(30px);
+                font-size: rem(40px);
+                line-height: rem(45px);
+                max-width: 400px;
+            }
+
+            p{
+                margin-bottom: rem(25px);
+                max-width: 500px;
+
+                &.disclaimer{
+                    color: $color-red;
+                    font-size: rem(14px);
+                    line-height: rem(22px);
+                }
+            }
+
+            ul{
+                padding-left: 0;
+                list-style: none;
+
+                li{
+                    p{
+                        margin-bottom: rem(17px);
+                    }
+                }
+            }
+
+            .cta{
+                margin-top: rem(25px);
+                display: flex;
+                align-items: center;
+                padding-left: 20px;
+                width: 180px;
+                height: 43px;
+                border-radius: 10px;
+                color: #fff;
+                font-size: 0.875rem;
+                background: #5403ff url(../../images/icon_arrow-right.svg) no-repeat right 18px center;
+            }
+        }
+    }
+}

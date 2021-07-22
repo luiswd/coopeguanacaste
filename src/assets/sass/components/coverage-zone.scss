@@ -1,0 +1,102 @@
+/*------------------*
+# Coverage
+*------------------*/
+
+.coverageZone{
+    &Box{
+        margin-bottom: rem(20px);
+        margin-top: rem(20px);
+        background: $color-lightGray;
+        border-radius: 40px;
+        padding: rem(70px) 3.5vw;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: space-between;
+        align-items: center;
+
+        &-left,
+        &-right{
+            width: 50%;
+        }
+        &-left{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: flex-start;
+            align-content: center;
+            align-self: flex-start;
+    
+            img{
+                width: auto;
+            }
+        }
+        &-right{
+            width: 45%;
+            align-self: flex-start;
+            h2{
+                font-size: rem(60px);
+                line-height: rem(68px);
+                max-width: 400px;
+                margin-bottom: rem(35px);
+            }
+
+            p{
+                font-size: rem(17px);
+                line-height: rem(27px);
+                max-width: 492px;
+                margin-bottom: rem(51px);
+            }
+
+            input{
+                background: $color-lightGray url('../../images/search.svg') no-repeat right 22px center;
+                border: 1px solid $color-black;
+                border-radius: 10px;
+                width: 414px;
+                height: 46px;
+                color: $color-black;
+                padding-left: 18px;
+                text-transform: uppercase;
+                margin-bottom: rem(28px);
+
+                &::placeholder{
+                    color: $color-black;
+                }
+            }
+
+            .results-title{
+                font-size: rem(18px);
+                line-height: rem(34px);
+                margin-bottom: rem(19px);
+            }
+
+            ul.results{
+                list-style: none;
+                margin-bottom: rem(40px);
+                li{
+                    padding-left: 25px;
+                    background: url('../../images/results-pin.svg') no-repeat left center;
+                    margin-bottom: 10px;
+                }
+            }
+
+            h4{
+                font-size: rem(24px);
+                line-height: rem(38px);
+                margin-bottom: rem(10px);
+
+                & + p{
+                    font-size: rem(20px);
+                    line-height: rem(32px);
+
+                    a{
+                        color: $color-orange;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,248 @@
+/*------------------*
+# Program Training
+*------------------*/
+
+.programTraining{
+    margin-top: rem(20px);
+    &Box{
+        border: 1px solid $color-black;
+        border-radius: 40px;
+        padding: rem(70px) 2.5vw rem(70px) 1.5vw;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+
+        &-left,
+        &-right{
+            width: 50%;
+        }
+        &-left{
+            width: 45%;
+
+            display: flex;
+            flex-direction: column;
+            align-content: flex-end;
+            flex-wrap: wrap;
+            align-items: flex-end;
+
+            h2{
+                font-size: rem(60px);
+                line-height: rem(68px);
+                margin-bottom: rem(25px);
+                max-width: 360px;
+                display: inline-block;
+
+                text-align: right;
+            }
+
+            h3{
+                margin-top: rem(50px);
+                margin-bottom: rem(30px);
+                font-size: rem(40px);
+                line-height: rem(45px);
+                max-width: 440px;
+                display: inline-block;
+
+                text-align: right;
+            }
+
+            p{
+                margin-bottom: rem(25px);
+                max-width: 500px;
+
+                text-align: right;
+
+                &.disclaimer{
+                    font-size: rem(14px);
+                    line-height: rem(22px);
+                    max-width: 410px;
+                }
+            }
+
+            ul{
+                padding-left: 0;
+                list-style: none;
+
+                li{
+                    margin-bottom: rem(22px);
+                    p{
+                        max-width: 340px;
+                        margin-bottom: 0;
+                    }
+                }
+
+                &.connection-steps{
+                    width: 100%;
+                    max-width: 400px;
+                    li{
+                        text-align: center;
+                        width: 100%;
+                        margin-bottom: rem(89px);
+                        img{
+                            width: auto;
+                            display: block;
+                            margin: 0 auto;
+                            margin-bottom: rem(20px);
+                        }
+                        p{
+                            display: block;
+                            margin: 0 auto;
+                            max-width: 307px;
+                            text-align: center;
+                        }
+
+                    }
+                }
+            }
+
+            .cta{
+                margin-top: rem(25px);
+                display: flex;
+                align-items: center;
+                padding-left: 20px;
+                width: 180px;
+                height: 43px;
+                border-radius: 10px;
+                color: #fff;
+                font-size: 0.875rem;
+                background: #5403ff url(../../images/icon_arrow-right.svg) no-repeat right 18px center;
+            }
+        }
+        &-right{
+            width: 55%;
+            align-self: flex-start;
+            display: flex;
+            flex-direction: column;
+            align-content: flex-end;
+            justify-content: center;
+            flex-wrap: wrap;
+        
+            .programSlider{
+                width: 582px;
+                img{
+                    width: 582px;
+                }
+
+                .slick-dots{
+                    bottom: -38px;            
+                    li{
+                        button{
+                            color: $color-black;
+                            font-size: rem(15px);
+                            border-radius: 100%;
+                            &::before{
+                                display: none;
+                            }
+                        }
+                    }
+            
+                    .slick-active{
+                        button{
+                            border: 1px solid $color-black;
+                        }
+                    }
+                }
+
+            }
+            
+        }
+    }
+
+    &Map{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: center;
+        h2{
+            font-size: rem(45px);
+            line-height: rem(51px);
+            display: block;
+            max-width: 800px;
+            text-align: center;
+            margin-bottom: rem(83px);
+            span{
+                color: $color-pink;
+            }
+        }
+
+        &-left{
+            width: 32.7%;
+            align-self: flex-start;
+            img{
+                width: auto;
+            }
+        }
+        &-right{
+            width: 67.3%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-content: flex-start;
+            align-self: flex-start;
+            ul.zones{
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                align-content: flex-start;
+                justify-content: flex-start;
+                width: 32.6%;
+                li{
+                    width: 100;
+                    border: 1px solid  $color-black;
+                    border-radius: 10px;
+                    padding: 13px 20px;
+                    margin-bottom: rem(8px);
+
+                     /* Style the buttons that are used to open and close the accordion panel */
+                    .collapse {
+                        cursor: pointer;
+                        width: 100%;
+                        text-align: left;
+                        border: none;
+                        outline: none;
+                        transition: 0.4s;
+                        background-color: $color-white;
+                        font-size: rem(20px);
+                        line-height: rem(32px);
+                        font-weight: 800;
+
+                        &.active + .panel{
+                            margin-top: rem(10px);
+                        }
+                    }
+                    
+                    /* Style the accordion panel. Note: hidden by default */
+                    .panel {
+                        max-height: 0;
+                        overflow: hidden;
+                        transition: max-height 0.2s ease-out;
+                        font-size: rem(15px);
+                        line-height: rem(33px);
+                    }
+
+                    .collapse:after {
+                        content: ''; /* Unicode character for "plus" sign (+) */
+                        height: 10px;
+                        width: 10px;
+                        background: url('../../images/arrow-top.svg') no-repeat top left;
+                        color: $color-black;
+                        float: right;
+                        margin-right: 0;
+                        margin-top: 10px;
+                    }
+                    .active:after {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,67 @@
+/*------------------*
+# Mentor
+*------------------*/
+
+.mentor{
+    margin-bottom: rem(20px);
+    &Box{
+        border: 1px solid $color-black;
+        border-radius: 40px;
+        padding: rem(70px) 3.5vw;
+        margin-top: rem(20px);
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+
+        &-left,
+        &-right{
+            width: 50%;
+        }
+        &-left{
+            width: 45%;
+            display: flex;
+            flex-direction: column;
+            align-content: flex-end;
+            flex-wrap: wrap;
+            align-items: flex-end;
+            align-self: flex-start;
+            h2{
+                font-size: rem(60px);
+                line-height: rem(68px);
+                max-width: 342px;
+                margin-bottom: rem(36px);
+                text-align: right;
+            }
+
+            p{
+                font-size: rem(17px);
+                line-height: rem(27px);
+                max-width: 510px;
+                margin-bottom: rem(20px);
+
+                text-align: right;
+            }
+        }
+        &-right{
+            width: 55%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: flex-end;
+            align-items: center;
+            align-content: center;
+
+            img{
+                width: auto;
+            }
+
+            &.center{
+
+            }
+        }
+    }
+}
