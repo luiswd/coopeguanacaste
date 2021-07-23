@@ -87,6 +87,36 @@
                     max-width: 508px;
                 }
             }
+
+            &-right{
+                position: relative;
+                img{
+                    width: 100%;
+                    max-width: 519px;
+                }
+
+                .promo-icon{
+                    width: auto;
+                    position: absolute;
+
+                    &.like{
+                        bottom: -50px;
+                        left: 2vw;
+                    }
+
+                    &.messenger{
+                        top: -61px;
+                        right: -1vw;
+                        z-index: -1;
+                    }
+
+                    &.facebook{
+                        top: -74px;
+                        left: -18vw;
+                        z-index: -1;
+                    }
+                }
+            }
         }
     }
 

@@ -94,9 +94,36 @@
             align-content: center;
             justify-content: center;
             align-items: center;
+            position: relative;
             img{
                 width: 100%;
-                max-width: 500px;
+                max-width: 602px;
+
+                &.indexIcon{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: auto;
+
+                    &.reaction{
+                        left: 12vw;
+                        top: -103px;
+                        z-index: -1;
+                    }
+
+                    &.star{
+                        top: auto;
+                        bottom: -41px;
+                        z-index: -1;
+                    }
+
+                    &.like{
+                        left: auto;
+                        right: 3vw;
+                        top: auto;
+                        bottom: -40px;
+                    }
+                }
             }
         }
 
