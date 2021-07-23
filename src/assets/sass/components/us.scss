@@ -55,9 +55,13 @@
             }
 
             &-bottom{
-                padding: rem(70px) 3.5vw rem(70px);
+                padding: rem(20px) 3.5vw rem(70px);
                 border-radius: 0 0 40px 0;
                 background-color: $color-orange;
+
+                :first-child{
+                    margin-bottom: rem(10px);
+                }
             }
 
             p{

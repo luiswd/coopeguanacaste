@@ -19,13 +19,19 @@
     }
     &.intro-enterprise{
         .introBox{
+            padding-top: 0;
+            padding-bottom: 0;
             &-left{
+                padding-top: 50px;
                 h2{
                     max-width: 382px;
                 }
                 p{
                     max-width: 454px;
                 }
+            }
+            &-right{
+                padding: rem(30px) 0;
             }
         }
     }

@@ -43,6 +43,10 @@
                     strong{
                         font-family: 'gt_walsheim_probold';
                     }
+
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
                 }
             }
         }

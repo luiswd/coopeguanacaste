@@ -30,3 +30,44 @@ html {
     height: 100vh;
     overflow-y: hidden;
 }
+
+body{
+    background: #dcccff;
+    background: linear-gradient( 180deg, #dcccff 0%, white 10%, white 100%);
+    &.bg{
+        &-purple{
+            background: #dcccff;
+            background: linear-gradient( 180deg, #dcccff 0%, white 10%, white 100%);
+        }
+
+        &-purpleDark{
+            background: rgb(187,154,255);
+            background: linear-gradient(180deg, rgba(187,154,255,1) 0%, rgba(255,255,255,1) 30%);
+        }
+    
+        &-aqua{
+            background: rgb(153,245,245);
+            background: linear-gradient(180deg, rgba(153,245,245,1) 0%, rgba(255,255,255,1) 50%);
+        }
+
+        &-yellow{
+            background: rgb(255,247,169);
+            background: linear-gradient(180deg, rgba(255,247,169,1) 0%, rgba(255,255,255,1) 50%);
+        }
+
+        &-orange{
+            background: rgb(255,208,164);
+            background: linear-gradient(180deg, rgba(255,208,164,1) 0%, rgba(255,255,255,1) 50%);
+        }
+
+        &-green{
+            background: rgb(154,255,207);
+            background: linear-gradient(180deg, rgba(154,255,207,1) 0%, rgba(255,255,255,1) 10%);
+        }
+
+        &-blue{
+            background: rgb(129,179,255);
+            background: linear-gradient(180deg, rgba(129,179,255,1) 0%, rgba(255,255,255,1) 50%);
+        }
+    }
+}

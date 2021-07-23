@@ -54,6 +54,10 @@
                     height: 347px;
                     padding: 22px 29px;
 
+                    :first-child{
+                        margin-bottom: rem(27px);
+                    }
+
                     h3{
                         margin-bottom: rem(24px);
                         font-size: rem(25px);
