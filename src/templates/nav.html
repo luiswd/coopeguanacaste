@@ -1,30 +1,47 @@
-<div class="header">
-    <div class="menu-container hidden">
-        <div class="menu-column">
-            <ul class="important-links">
-                <li><sup>01.</sup><a href="#">TV</a></li>
-                <li><sup>02.</sup><a href="#">Internet</a></li>
-                <li><sup>03.</sup><a href="#">Telefonía</a></li>
-            </ul>
-        </div>
-        <div class="menu-column ilustrations">
-            <img src="images/menu1.png" alt="">
-            <img src="images/menu2.png" alt="">
-        </div>
-        <div class="menu-column">
-            <ul class="secondary-links">
-                <li><a href="#">Pagar mi recibo</a></li>
-                <li><a href="#">Zonas de Cobertura</a></li>
-                <li><a href="#">¿Quiénes Somos?</a></li>
-                <li><a href="#">Preguntas Frecuentes</a></li>
-                <li><a href="#">Servicios Empresariales</a></li>
-                <li><a href="#">Programas y Proyectos</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
-        </div>
+<div class="menu-container">
+    <div class="menu-column">
+        <ul class="important-links">
+            <li><sup>01.</sup><a href="television.html" data-name="tv-anchor"><span>TV</span></a></li>
+            <li><sup>02.</sup><a href="index.html#combos" data-name="internet-anchor"><span>Internet</span></a></li>
+            <li><sup>03.</sup><a href="index.html#combos" data-name="tel-anchor"><span>Telefonía</span></a></li>
+        </ul>
     </div>
+    <div class="menu-column ilustrations">
+        <div id="tv-anchor">
+            <img src="images/tv-1.jpg" alt="Menu">
+            <img src="images/tv-2.jpg" alt="Menu">
+        </div>
+        <div id="internet-anchor">
+            <img src="images/in-1.jpg" alt="Menu">
+            <img src="images/in-2.jpg" alt="Menu">
+        </div>
+        <div id="tel-anchor">
+            <img src="images/tel-1.jpg" alt="Menu">
+            <img src="images/tel-2.jpg" alt="Menu">
+        </div>
+
+    </div>
+    <div class="menu-column">
+        <ul class="secondary-links">
+            <li><a href="tramites.coopeguanacaste.com" target="blank">Pagar mi recibo</a></li>
+            <li><a href="servicio-recarga.html">Servicio de recarga</a></li>
+            <li><a href="zonas-cobertura.html">Zonas de Cobertura</a></li>
+            <li><a href="grilla-canales.html">Grilla de canales</a></li>
+            <li><a href="servicios-profesionales.html">Servicios Empresariales</a></li>
+            <li><a href="quienes-somos.html">¿Quiénes Somos?</a></li>
+            <li><a href="programas-proyectos.html">Programas y Proyectos</a></li>
+            <li><a href="preguntas-frecuentes.html">Preguntas Frecuentes</a></li>
+            <li><a href="centro-soporte.html">Centro de Soporte</a></li>
+            <!-- <li><a href="centro-soporte.html">Contacto</a></li> -->
+        </ul>
+    </div>
+</div>
+<div class="header">
     <div class="wrapper">
         <ul class="header-contact">
+            <li class="header-contact__consulte">
+                <a href="#">Consulte el recibo de su servicio</a>
+            </li>
             <li class="header-contact__facebook">
                 <a href="#">Telecomunicaciones</a>
             </li>
@@ -37,7 +54,7 @@
         </ul>
         <nav class="navigation">
             <div class="navigation-left">
-                <img class="logo" src="images/logo.svg" alt="Coope Logo">
+                <a href="index.html"><img class="logo" src="images/logo.svg" alt="Coope Logo"></a>
                 <ul>
                     <li>
                         <a class="login" href="#">Inicia sesión</a>
@@ -46,21 +63,29 @@
                         <a class="register" href="#">Registrarse</a>
                     </li> 
                     <li>
-                        <a class="cart" href="#">Cart</a>
+                        <a class="cart" href="#">Carrito</a>
                     </li>
                 </ul>
             </div>
             <navigation class="navigation-right">
-                <a href="#" class="button-menu open">
-                    <i class="icon menu"></i>
-                    <span>Menu</span>
+                <a href="#" class="button-menu">
+                    <p class="icon-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </p>
+                    <p class="name-menu">
+                        <span>Menu</span>
+                        <span>Cerrar</span>
+                    </p>
                 </a>
-                <a href="#" class="button-menu close hidden">
+                <!-- <a href="#" class="button-menu close hidden">
                     <i class="icon menu close"></i>
                     <span>Close</span>
-                </a>
-                <a href="#" class="button button-planes">Planes</a>
-                <a href="#" class="button button-contrata">Contrata</a>
+                </a> -->
+                <a href="#" class="button button-planes">Planes <img src="images/icon_wifi.svg" alt="WIFI"></a>
+                <a href="#" class="button button-contrata"><span>Contrata</span><img src="images/icon_chat.svg" alt="Contratar"></a>
+                <a href="#" class="button button-big-contrata"><img class="big" src="images/icon_chat.svg" alt="Contratar"><span>Contrata</span></a>
             </navigation>
         </nav>
     </div>

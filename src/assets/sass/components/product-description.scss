@@ -1,36 +1,47 @@
 /*------------------*
 # Product Description
 *------------------*/
-
 .productDescription{
     .product{
         border: 1px solid $color-black;
         border-radius: 40px;
-        display: flex;
+        @include flexbox;
         margin-bottom: 16px;
-        padding: 50px 0;
-
+        padding: 92px 0;
+        justify-content: center;
         &.telefonia{
-            background: url('../../images/background_telefonia.svg') no-repeat center center;
-            background-size: 100%;
-
-            img{
-                max-width: 291px;
+            .product-left{
+                width: 30%;
+            }
+            .product-right{
+                width: 40%;
             }
         }
 
         &.internet{
-            background: url('../../images/background_internet.svg') no-repeat center center;
-            background-size: 100%;
+            /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#6cf5e5+0,ffffff+100&1+0,0+100 */
+            background: -moz-linear-gradient(top,  rgba(108,245,229,0.8) 0%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(top,  rgba(108,245,229,0.8) 0%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom,  rgba(108,245,229,0.8) 0%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6cf5e5', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+            .product-left{
+                width: 40%;
+            }
+            .product-right{
+                width: 30%;
+            }
         }
 
         &.television{
-            background: url('../../images/background_television.svg') no-repeat center center;
-            background-size: 100%;
+            .product-left{
+                width: 30%;
+            }
+            .product-right{
+                width: 40%;
+            }
         }
 
         &-content{
-            max-width: 440px;
             h2{
                 font-size: rem(45px);
                 line-height: rem(51px);
@@ -45,18 +56,42 @@
             }
             .copy{
                 margin-bottom: 35px;
+                font-family: $text;
             }
 
             .cta{
                 display: flex;
                 align-items: center;
-                padding-left: 23px;
+                justify-content: space-evenly;
                 width: 140px;
                 height: 43px;
                 border-radius: 10px;
                 color: $color-white;
                 font-size: rem(14px);
-                background: $color-purple url('../../images/icon_arrow-right.svg') no-repeat right 22px center;
+                background: $color-purple;
+                @include transform;
+                img{
+                    @include transform;
+                    -webkit-transform: translateX(0);
+                    -moz-transform: translateX(0);
+                    -ms-transform: translateX(0);
+                    -o-transform: translateX(0);
+                    transform: translateX(0);
+                }
+                &:hover{
+                    -webkit-transform: scale(1.05);
+                    -moz-transform: scale(1.05);
+                    -ms-transform: scale(1.05);
+                    -o-transform: scale(1.05);
+                    transform: scale(1.05);
+                    img{
+                        -webkit-transform: translateX(7px);
+                        -moz-transform: translateX(7px);
+                        -ms-transform: translateX(7px);
+                        -o-transform: translateX(7px);
+                        transform: translateX(7px);
+                    }
+                }
             }
         }
 
@@ -64,21 +99,56 @@
             width: 100%;
             display: flex;
             justify-content: center;
+            position: relative;
             img{
-                width: 100%;
-                max-width: 500px;
+                width: 40%;
+                opacity: 0;
+                position: relative;
+                &.girl-ilu{
+                    left:-10px;
+                }
+                &.tv-ilu{
+                    left:10px;
+                }
+                &.guy-ilu{
+                    width: 50%;
+                    left:10px;
+                }
+                &.lady-ilu{
+                    left:-10px;
+                }
+                &.small-ilu{
+                    position: absolute;
+                    width: auto;
+                    &.signal-ilu{
+                        top: -150px;
+                        left: -170px;
+                        width: 300px;
+                    }
+                    &.bubble-ilu{
+                        top: -120px;
+                        right: -130px;
+                        width: 250px;
+                    }
+                }
             }
         }
 
         &-left,
         &-right{
-            width: 50%;
-            display: flex;
+            @include flexbox;
             align-items: center;
             justify-content: center;
             align-content: center;
             flex-direction: column;
             flex-wrap: nowrap;
+            position: relative;
         }
+        // &-left{
+        //     width: auto;
+        // }
+        // &-right{
+        //     width: 40%;
+        // }
     }
 }

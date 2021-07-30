@@ -4,22 +4,28 @@
         left: 4vw;
         width: auto;
         bottom: auto;
-
         li{
+            width: 35px;
+            height: 35px;
+            padding: 7px;
+            border-radius: 100%;
+            @include general-transition;
+            border: 1px solid transparent;
+            &:hover{
+                border: 1px solid $color-black;
+            }
             button{
                 color: $color-black;
                 font-size: rem(15px);
-                border-radius: 100%;
+                font-family: $text-medium;
+                padding: 0;
                 &::before{
                     display: none;
                 }
             }
         }
-
         .slick-active{
-            button{
-                border: 1px solid $color-black;
-            }
+            border: 1px solid $color-black;
         }
     }
 
@@ -39,13 +45,13 @@
 
         &-content{
             h2{
-                font-size: rem(50px);
-                line-height: rem(60px);
-
+                font-size: rem(45px);
+                line-height: 130%;
+                letter-spacing: 1px;
+                font-family: $text-medium;
                 &.title{
                     color: $color-purple;
                 }
-
                 &.subtitle{
                     margin-bottom: 35px;
                 }
@@ -56,11 +62,10 @@
 
             .price{
                 color: $color-orange;
-                font-family: 'gt_walsheim_probold';
+                font-family: $text-bold;
                 font-size: rem(45px);
                 line-height: rem(40px);
                 margin-bottom: 38px;
-                
                 strong{
                     font-size: rem(65px);
                     line-height: rem(60px);
@@ -70,6 +75,7 @@
                     font-size: rem(19px);
                     line-height: rem(30px);
                     color: $color-black;
+                    font-family: $text-light;
                 }
             }
 
@@ -82,7 +88,15 @@
                 border-radius: 10px;
                 color: $color-white;
                 font-size: rem(14px);
-                background: $color-purple url('../../images/icon_arrow-right.svg') no-repeat right 22px center;
+                background: $color-purple url('./../images/icon_arrow-right.svg') no-repeat right 22px center;
+                @include general-transition;
+                &:hover{
+                    -webkit-transform: scale(1.05);
+                    -moz-transform: scale(1.05);
+                    -ms-transform: scale(1.05);
+                    -o-transform: scale(1.05);
+                    transform: scale(1.05);
+                }
             }
         }
 
@@ -98,7 +112,7 @@
             img{
                 width: 100%;
                 max-width: 602px;
-
+                
                 &.indexIcon{
                     position: absolute;
                     top: 0;
@@ -150,22 +164,63 @@
 }
 
 .banner-slider{
-    padding: 50px 0;
-    &-slick{
-        display: flex;
+    .menu__item {
+        cursor: default;
+        position: relative;
+        overflow: hidden;
+        text-align: center;
     }
-    &__item{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        align-content: center;
-        justify-content: center;
+    .menu__item-link {
+        display: block;
+        position: relative;
+        text-decoration: none;
+        color: transparent;
+    }
+    .marquee {
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        background: var(--marquee-bg);
+        transform: translate3d(0,0,0);
+    }
+    .marquee__inner-wrap {
+        height: 100%;
+        width: 100%;
+        transform: translate3d(0,0,0);
+    }
+    .marquee__inner {
+        height: 100%;
+        width: fit-content;
         align-items: center;
-
-        p{
-            font-size: rem(64px);
-            margin: 0 50px;
-            font-family: 'gt_walsheim_probold';
+        display: flex;
+        position: relative;
+        animation: marquee 50s linear infinite;
+        will-change: transform;
+    }
+    @keyframes marquee {
+        100% {
+            transform: translate3d(-50%, 0, 0);
         }
+    }
+    .menu__item-link,
+    .marquee span {
+        white-space: nowrap;
+        font-family: $text-bold;
+        font-size:rem(90px);
+        line-height:180%;
+        padding: rem(50px) rem(60px) rem(50px);
+        text-transform: uppercase;
+        color:$color-black;
+    }
+    .menu__item-link{
+        color: transparent;
+    }
+    .marquee__img {
+        // width: 10px;
+        height: 70%;
     }
 }

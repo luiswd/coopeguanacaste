@@ -35,7 +35,6 @@
                 margin-bottom: rem(25px);
                 max-width: 360px;
                 display: inline-block;
-
                 text-align: right;
             }
 
@@ -109,7 +108,7 @@
                 border-radius: 10px;
                 color: #fff;
                 font-size: 0.875rem;
-                background: #5403ff url(../../images/icon_arrow-right.svg) no-repeat right 18px center;
+                background: #5403ff url(./../images/icon_arrow-right.svg) no-repeat right 18px center;
             }
         }
         &-right{
@@ -125,6 +124,7 @@
                 width: 582px;
                 img{
                     width: 582px;
+                    @include border-radius(40px);
                 }
 
                 .slick-dots{
@@ -172,10 +172,16 @@
         }
 
         &-left{
-            width: 32.7%;
+            width: 30%;
+            margin-right: 2.7%;
             align-self: flex-start;
-            img{
-                width: auto;
+            svg{
+                path{
+                    &.active{
+                        fill:$color-orange;
+                        @include general-transition;
+                    }
+                }
             }
         }
         &-right{
@@ -209,7 +215,7 @@
                         border: none;
                         outline: none;
                         transition: 0.4s;
-                        background-color: $color-white;
+                        background-color: transparent;
                         font-size: rem(20px);
                         line-height: rem(32px);
                         font-weight: 800;
@@ -226,13 +232,27 @@
                         transition: max-height 0.2s ease-out;
                         font-size: rem(15px);
                         line-height: rem(33px);
+                        li{
+                            border: 0 none;
+                            border-radius: 0;
+                            padding: 0;
+                            margin-bottom: 20px;
+                            font-size: 11px;
+                            line-height: 130%;
+                            &::before{
+                                content:'-';
+                                font-size: 12px;
+                                color: $color-black;
+                                margin-right: 5px;
+                            }
+                        }
                     }
 
                     .collapse:after {
-                        content: ''; /* Unicode character for "plus" sign (+) */
+                        content: ''; 
                         height: 10px;
                         width: 10px;
-                        background: url('../../images/arrow-top.svg') no-repeat top left;
+                        background: url('./../images/arrow-top.svg') no-repeat top left;
                         color: $color-black;
                         float: right;
                         margin-right: 0;

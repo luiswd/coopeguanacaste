@@ -68,10 +68,6 @@ function vendor(cb) {
 function css(cb) {
     gulp.src("src/assets/sass/*.scss")
         .pipe(sass({ outputStyle: "compressed" }).on("error", sass.logError))
-        .pipe(autoprefixer({
-            browserlist: ['last 2 versions'],
-            cascade: false
-        }))
         .pipe(gulp.dest("dist/css"))
         // Stream changes to all browsers
         .pipe(browserSync.stream());
@@ -111,7 +107,8 @@ function watch_files() {
     browserSync.init({
         server: {
             baseDir: "dist/"
-        }
+        },
+        port: 3001
     });
     gulp.watch("src/assets/sass/**/*.scss", css);
     gulp.watch("src/assets/images/*", imageMin);

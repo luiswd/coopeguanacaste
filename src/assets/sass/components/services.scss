@@ -6,7 +6,6 @@
     margin-bottom: 20px;
     padding: 0 2vw;
     .wrapper{
-        background: url('../../images/background_services.svg') no-repeat right center;
         border: 1px solid $color-black;
         border-radius: 40px;
         padding: 110px 0 80px; 
@@ -34,9 +33,24 @@
             flex-wrap: nowrap;
             align-content: center;
             align-items: center;
-
+            transition: all .3s;
+            opacity: 0;
+            transform:translateY(-100px);
+            &:nth-child(1){
+                @include delay(0ms);
+            }
+            &:nth-child(2){
+                @include delay(50ms);
+            }
+            &:nth-child(3){
+                @include delay(100ms);
+            }
+            &:nth-child(4){
+                @include delay(150ms);
+            }
             img{
-                margin-bottom: 17px;
+                margin-bottom: 25px;
+                
             }
 
             .copy{
@@ -54,7 +68,7 @@
                 border-radius: 10px;
                 color: $color-white;
                 font-size: rem(14px);
-                background: $color-purple url('../../images/icon_arrow-right.svg') no-repeat right 33px center;
+                background: $color-purple url('./../images/icon_arrow-right.svg') no-repeat right 33px center;
             }
         }
     }

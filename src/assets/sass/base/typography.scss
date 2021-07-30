@@ -20,7 +20,6 @@ h1 {
 
 h2 {
     font-size: $h2-size;
-    font-family: 'gt_walsheim_probold';
 }
 
 h3 {
@@ -45,25 +44,45 @@ p{
 }
 
 @font-face {
-    font-family: 'gt_walsheim_probold';
-    src: url('../../fonts/gtwalsheimpro-bold-webfont.woff2') format('woff2'),
-    url('../../fonts/gtwalsheimpro-bold-webfont.woff') format('woff');
+    font-family: 'gt_walsheim_prolight';
+    src: url('./../fonts/gtwalsheimpro-light.eot');
+    src: url('./../fonts/gtwalsheimpro-light.eot?#iefix') format('embedded-opentype'),
+         url('./../fonts/gtwalsheimpro-light.woff2') format('woff2'),
+         url('./../fonts/gtwalsheimpro-light.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-}
-
-@font-face {
-    font-family: 'gt_walsheim_promedium';
-    src: url('../../fonts/gtwalsheimpro-medium-webfont.woff2') format('woff2'),
-    url('../../fonts/gtwalsheimpro-medium-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'gt_walsheim_proregular';
-    src: url('../../fonts/gtwalsheimpro-regular-webfont.woff2') format('woff2'),
-    url('../../fonts/gtwalsheimpro-regular-webfont.woff') format('woff');
+    src: url('./../fonts/gtwalsheimpro-regular.eot');
+    src: url('./../fonts/gtwalsheimpro-regular.eot?#iefix') format('embedded-opentype'),
+         url('./../fonts/gtwalsheimpro-regular.woff2') format('woff2'),
+         url('./../fonts/gtwalsheimpro-regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
+@font-face {
+    font-family: 'GT Walsheim Pro Medium';
+    src: url('./../fonts/gtwalsheimpro-medium.woff2') format('woff2'),
+        url('./../fonts/gtwalsheimpro-medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GT Walsheim Pro Bold';
+    src: url('./../fonts/gtwalsheimprobold.woff2') format('woff2'),
+        url('./../fonts/gtwalsheimprobold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+$text:'gt_walsheim_proregular', sans-serif;
+$text-light:'gt_walsheim_prolight', sans-serif;
+$text-medium:'GT Walsheim Pro Medium', sans-serif;
+$text-bold: 'GT Walsheim Pro Bold', sans-serif;

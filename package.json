@@ -8,7 +8,9 @@
     },
     "author": "Kieran Brown",
     "license": "ISC",
-    "dependencies": {},
+    "dependencies": {
+        "pixi.js": "^6.0.4"
+    },
     "devDependencies": {
         "@babel/core": "^7.11.0",
         "@babel/preset-env": "^7.11.0",

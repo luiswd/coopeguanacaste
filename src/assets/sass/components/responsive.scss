@@ -1,0 +1,38 @@
+@media only screen and (max-width:1200px){
+    .master-wrapper{
+        opacity: 0;
+    }
+    .warning{
+        display: block;
+        font-size: 40px;
+        text-align: center;
+        position: absolute;
+        width: 100%;
+        top:45%;
+        padding: 0 20px;
+    }
+}
+@media only screen and (max-width:992px){
+
+}
+@media only screen and (max-width:767px){
+
+}
+@media only screen 
+	and (min-device-width: 375px) 
+	and (max-device-width: 812px) 
+	and (-webkit-min-device-pixel-ratio: 3)
+	and (orientation: landscape){
+
+}
+@media only screen and (max-width: 640px){
+
+}
+@media only screen and (max-width:480px){
+    .warning{
+        font-size: 20px;
+    }
+}
+@media only screen and (max-width:320px){
+
+}

@@ -11,6 +11,9 @@ html {
     min-height: 100%;
     word-wrap: break-word;
 }
+:root{
+    --cubic: cubic-bezier(0.33, 1, 0.68, 1);
+}
 
 * {
     &,
@@ -18,8 +21,6 @@ html {
     &:after {
         box-sizing: inherit;
     }
-
-    font-family: 'gt_walsheim_proregular'
 }
 
 .hidden{
@@ -27,13 +28,16 @@ html {
 }
 
 .no-scroll{
-    height: 100vh;
     overflow-y: hidden;
+}
+.master-wrapper{
+    width: 100%;
+    overflow-x: hidden;
 }
 
 body{
-    background: #dcccff;
-    background: linear-gradient( 180deg, #dcccff 0%, white 10%, white 100%);
+    background: rgba(84,3,255,0.4);
+    background: linear-gradient( 180deg, rgba(84,3,255,0.4) 0%, white 10%, white 100%);
     &.bg{
         &-purple{
             background: #dcccff;
@@ -70,4 +74,69 @@ body{
             background: linear-gradient(180deg, rgba(129,179,255,1) 0%, rgba(255,255,255,1) 50%);
         }
     }
+}
+.bubbles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    @include flexbox;
+    align-items: center;
+    justify-content: center;
+    @include general-transition;
+    .bubble{
+        filter:blur(70px);
+        overflow: visible;
+        opacity: 0;
+        &.bubble-1{
+            width: 412px;
+            height: 445px;
+            animation: fadeIn 3s forwards, float 20s ease infinite alternate;
+            path{
+                animation:colors 50s ease infinite alternate;
+            }
+        }
+        &.bubble-2{
+            width: 457px;
+            height: 422px;
+            animation: fadeIn 3s forwards, floatTwo 20s ease infinite alternate;
+            path{
+                animation:colorsTwo 50s ease infinite alternate;
+            }
+        }
+        &:nth-child(2) {
+            animation-delay: (2* 0.2)+s;
+        }
+    }
+}
+@keyframes float {
+    0% { transform: translate(0,0) }
+    50% { transform: translate(-16em,3em) }
+    100% { transform: translate(3em,5em) }
+}
+@keyframes floatTwo {
+    0% { transform: translate(-3rem,3rem) }
+    50% { transform: translate(5em,-1em) }
+    100% { transform: translate(0,0) }
+}
+@keyframes fadeIn {
+    0% { opacity: 0 }
+    100% { opacity: 1 }
+}
+@keyframes colors {
+    0%  {fill:$color-purple;}
+    25% {fill:$color-aqua}
+    50% {fill:$color-orange;}
+    75% {fill:$color-yellow;}
+    100% {fill:$color-purple;}
+}
+@keyframes colorsTwo {
+    0%  {fill:$color-orange;}
+    25% {fill:$color-purple}
+    50% {fill:$color-yellow;}
+    75% {fill:$color-aqua;}
+    100% {fill:$color-orange;}
 }

@@ -4,6 +4,7 @@
 
 .suggestions{
     margin-bottom: 20px;
+    padding: rem(100px) 0;
     .header{
         margin-bottom: rem(44px);
         .title{
@@ -18,7 +19,6 @@
             }
         }
     }
-
     &-list{
         
         display: flex;
@@ -28,38 +28,50 @@
         justify-content: space-evenly;
 
     }
-
     &-card{
-        width: 100%;
-        max-width: 322px;
+        width: 290px;
+        height: 347px;
+        perspective: 600px;
         position: relative;
         margin: 0 30px;
-
-        &:hover{
-            .back{
-                opacity: 1;
+        .card-holder{
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+            transform-origin: center right;
+            &.is-flipped{
+                transform: translateX(-100%) rotateY(-180deg);
+                .front{
+                    .title{
+                        opacity: 0;
+                    }
+                }
             }
         }
-
+        .card-alone{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            backface-visibility: hidden;
+        }
         .front{
-            position: relative;
-            display: flex;
+            background-color: white;
             img{
                 width: 100%;
             }
-
             .title{
                 position: absolute;
                 bottom: 21px;
                 left: 21px;
                 color: $color-white;
+                @include general-transition;
             }
         }
-
         .back{
-            position: absolute;
-            top: 0;
-            left: 0;
+            background: blue;
+            transform: rotateY( 180deg );
             color: white;
             background-color: $color-purple;
             border-radius: 10px;
@@ -69,18 +81,10 @@
             flex-direction: column;
             flex-wrap: nowrap;
             justify-content: space-between;
-            opacity: 0;
-
-            -webkit-transition: all 0.5s 0s ease;
-            -moz-transition: all 0.5s 0s ease;
-            -o-transition: all 0.5s 0s ease;
-            transition: all 0.5s 0s ease;
-
             .copy{
                 font-size: rem(19px);
                 line-height: rem(36px);
             }
-
             .source{
                 font-size: rem(21px);
                 line-height: rem(36px);

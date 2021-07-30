@@ -3,13 +3,14 @@
 *------------------*/
 
 .coverageDescription{
+    
     .coverage{
         display: flex;
         padding-top: 97px;
         margin-bottom: 16px;
 
         &-content{
-            max-width: 580px;
+            width: 60%;
             text-align: right;
             display: flex;
             flex-direction: column;
@@ -17,6 +18,7 @@
             align-content: flex-end;
             align-items: flex-end;
             justify-content: flex-start;
+            @include general-transition;
             h2{
                 font-size: rem(60px);
                 line-height: rem(68px);
@@ -39,24 +41,85 @@
             .cta{
                 display: flex;
                 align-items: center;
-                padding-left: 23px;
+                justify-content: space-evenly;
                 width: 140px;
                 height: 43px;
                 border-radius: 10px;
                 color: $color-white;
                 font-size: rem(14px);
-                background: $color-purple url('../../images/icon_arrow-right.svg') no-repeat right 22px center;
+                background: $color-purple;
+                @include transform;
+                img{
+                    @include transform;
+                    -webkit-transform: translateX(0);
+                    -moz-transform: translateX(0);
+                    -ms-transform: translateX(0);
+                    -o-transform: translateX(0);
+                    transform: translateX(0);
+                }
+                &:hover{
+                    -webkit-transform: scale(1.05);
+                    -moz-transform: scale(1.05);
+                    -ms-transform: scale(1.05);
+                    -o-transform: scale(1.05);
+                    transform: scale(1.05);
+                    img{
+                        -webkit-transform: translateX(7px);
+                        -moz-transform: translateX(7px);
+                        -ms-transform: translateX(7px);
+                        -o-transform: translateX(7px);
+                        transform: translateX(7px);
+                    }
+                }
             }
         }
 
         &-ilustration{
+            @include general-transition;
             width: 100%;
             display: flex;
             justify-content: center;
-            img{
-                width: 100%;
-                max-width: 439px;
-                height: 624px;
+            svg{
+                circle{
+                    @include general-transition;
+                    opacity: 0;
+                    filter: blur(6px);
+                    &:nth-child(3){
+                        @include delay(0.1s);
+                    }
+                    &:nth-child(4){
+                        @include delay(0.2s);
+                    }
+                    &:nth-child(5){
+                        @include delay(0.3s);
+                    }
+                    &:nth-child(6){
+                        @include delay(0.4s);
+                    }
+                    &:nth-child(7){
+                        @include delay(0.5s);
+                    }
+                    &:nth-child(8){
+                        @include delay(0.6s);
+                    }
+                    &:nth-child(9){
+                        @include delay(0.7s);
+                    }
+                    &:nth-child(10){
+                        @include delay(0.8s);
+                    }
+                    &:nth-child(11){
+                        @include delay(0.9s);
+                    }
+                    &:nth-child(12){
+                        @include delay(1s);
+                    }
+                }
+                &:hover{
+                    circle{
+                        fill:$color-purple;
+                    }
+                }
             }
         }
 

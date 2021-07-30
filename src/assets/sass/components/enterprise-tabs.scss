@@ -42,6 +42,7 @@
                     a{
                         display: block;
                         color: $color-gray;
+                        font-family: $text-bold;
                         &.active{
                             color: $color-black;
                         }
@@ -75,6 +76,7 @@
                     p{
                         font-size: rem(20px);
                         line-height: rem(32px);
+                        margin-bottom: rem(20px);
                     }
                 }
             }

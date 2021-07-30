@@ -7,7 +7,7 @@
     &Box{
         border: 1px solid $color-black;
         border-radius: 40px;
-        padding: rem(70px) 3.5vw 0;
+        padding: rem(70px) 3.5vw rem(70px);
 
         display: flex;
         flex-direction: row;
@@ -18,10 +18,10 @@
 
         &-left,
         &-right{
-            width: 50%;
+            width: 35%;
         }
         &-left{
-            width: 70%;
+            width: 60%;
             align-self: flex-end;
             h2{
                 font-size: rem(60px);
@@ -52,10 +52,9 @@
 
         }
         &-right{
-            right: 30%;
             align-self: flex-start;
             padding-bottom: 5.125rem;
-
+            margin-right: 5%;
             p:first-child{
                 margin-bottom: rem(30px);
             }
@@ -63,7 +62,6 @@
             p{
                 font-size: rem(20px);
                 line-height: rem(32px);
-                max-width: 464px;
             }
         }
     }

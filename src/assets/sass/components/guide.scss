@@ -1,7 +1,6 @@
 /*------------------*
 # Guide
 *------------------*/
-
 .guide{
     &Box{
         margin: rem(20px) 0 0;
@@ -31,7 +30,7 @@
                 line-height: rem(32px);
                 margin-bottom: rem(28px);
                 width: 100%;
-                font-family: 'gt_walsheim_probold';
+                font-family: $text-bold;
             }
 
             ul{
@@ -41,7 +40,7 @@
                 li{
                     margin-bottom: 14px;
                     strong{
-                        font-family: 'gt_walsheim_probold';
+                        font-family: $text-bold;
                     }
 
                     &:last-child{
@@ -55,11 +54,6 @@
         &-right{
             width: 49%;
             align-self: flex-start;
-        }
-        &-left{
-        }
-        &-right{
-
         }
     }
 }

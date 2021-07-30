@@ -6,11 +6,41 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <title>Coopeguanacaste</title>
 
-        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="css/app.css" />
     </head>
     <body class="{{bodyClass}}">
+        <!-- Canvas -->
+        <div class="bubbles">
+            <svg class="bubble bubble-1" viewBox="0 0 651 556" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#3603FF">
+                <animate id="animation-to-check" repeatCount="indefinite" fill="freeze" attributeName="d" dur="10s"
+
+                values="M66.3091 172.001C87.3092 100 121.31 63.0008 205.31 55.0008C311.31 69.0008 353.309 169 417.309 199C507.309 219 591.309 167.001 661.309 219.001C727.309 275.001 736.153 375.596 715.309 435.001C694.37 494.676 627.309 575 507.309 537C401.309 473.001 400.771 405.207 345.309 382.999C289.337 360.585 153.309 447.001 83.3095 337.001C54.2532 286.641 44.3092 235 66.3091 172.001Z;
+                
+                M132.309 281.003C153.309 209.003 211 152 307 122C425 84.0005 503 102.001 567 132.001C651 162 695 198 763 272C827 356 802.153 484.598 781.309 544.003C760.37 603.679 711 712.001 559 746.001C384.999 766 356.462 746.208 301 724C245.027 701.586 143 614 110.999 514.001C83.0002 446 110.309 344.003 132.309 281.003Z;
+                
+                M66.3091 172.001C87.3092 100 121.31 63.0008 205.31 55.0008C311.31 69.0008 353.309 169 417.309 199C507.309 219 591.309 167.001 661.309 219.001C727.309 275.001 736.153 375.596 715.309 435.001C694.37 494.676 627.309 575 507.309 537C401.309 473.001 400.771 405.207 345.309 382.999C289.337 360.585 153.309 447.001 83.3095 337.001C54.2532 286.641 44.3092 235 66.3091 172.001Z"/>
+            </path>  
+        </svg>
+        <svg class="bubble bubble-2" viewBox="0 0 440 363" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#FF7C03">
+                <animate id="animation-to-check" repeatCount="indefinite" fill="freeze" attributeName="d" dur="10s"
+
+                values="M233 29.0006C308 4.00004 342.029 -6.97562 383 5.00022C430.626 18.9215 447 93.0003 436 132C397 222 328.125 157.727 309.004 206C290.574 252.529 390.002 298 356.004 372C328.002 418 293.002 432 233.002 431C168.002 416 175.002 321 132.003 321C101.002 314 60.2786 306.076 34.003 269C5.36447 228.59 -8.21391 177.087 6.9999 111C17.7861 81.0871 51.1066 44.3787 102 29C150 21 164 54 233 29.0006Z;
+                
+                M255.999 19.0012C330.999 -5.99938 340.028 -1.97583 380.999 10C428.625 23.9213 465.999 82.0008 454.999 121.001C415.999 211.001 459.12 218.728 439.999 267.001C421.568 313.53 384.996 299.001 350.999 373.001C322.996 419.001 275.31 422.859 215.31 421.859C150.31 406.859 161 397 107 377C75.9985 370 -2.00141 325 0.998723 280C13.999 222 53.7849 212.088 68.9987 146.001C79.7849 116.088 61.1055 32.3796 111.999 17.0008C159.999 9.00083 186.999 44.0006 255.999 19.0012Z;
+                
+                M233 29.0006C308 4.00004 342.029 -6.97562 383 5.00022C430.626 18.9215 447 93.0003 436 132C397 222 328.125 157.727 309.004 206C290.574 252.529 390.002 298 356.004 372C328.002 418 293.002 432 233.002 431C168.002 416 175.002 321 132.003 321C101.002 314 60.2786 306.076 34.003 269C5.36447 228.59 -8.21391 177.087 6.9999 111C17.7861 81.0871 51.1066 44.3787 102 29C150 21 164 54 233 29.0006Z"/>
+            </path>        
+        </svg>
+
+        
+            
+        </div>
+        <p class="warning">Ver sitio web en escritorio</p>
+        <!-- Content -->
         <div class="master-wrapper" data-scroll-container>
             {% include "nav.html" %}
     
@@ -18,8 +48,10 @@
         </div>
 
         <script type="text/javascript" src="js/vendor/jquery-3.6.0.min.js"></script>
-        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
         <script type="text/javascript" src="js/vendor/locomotive-scroll.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
         <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
         <script src="https://cdn.lordicon.com/libs/frhvbuzj/lord-icon-2.0.2.js"></script>
         <script src="js/main.js"></script>

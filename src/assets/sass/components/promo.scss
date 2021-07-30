@@ -5,7 +5,7 @@
 .promo{
     &.tv{
         .promoBox{
-            background: url('../../images/promoTV.png') no-repeat right top;
+            background: url('./../images/promoTV.png') no-repeat right top;
             background-size: 50% 100%;
         }
     }
@@ -54,9 +54,9 @@
                 height: 43px;
                 border-radius: 10px;
                 color: #fff;
-                font-size: rem(22px);
+                font-size: rem(16px);
                 line-height: rem(25px);
-                background: #5403ff url(../../images/icon_arrow-right.svg) no-repeat right 18px center;
+                background: #5403ff url(./../images/icon_arrow-right.svg) no-repeat right 18px center;
             }
         }
         &-right{

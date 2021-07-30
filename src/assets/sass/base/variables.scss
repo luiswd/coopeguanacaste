@@ -59,7 +59,9 @@ $base-line-height: 1.5 !default;
 $color-white: #ffffff !default;
 $color-black: #000000 !default;
 $color-orange: #FF7C03;
+$color-orangeDarker: rgb(255, 119, 0);
 $color-purple: #5403FF;
+$color-purpleDarker: #4400D3;
 $color-lightPurple: #DCCCFF;
 $color-aqua: #6CF5E5;
 $color-gray: #7D7D7D;
@@ -67,6 +69,7 @@ $color-red: #E42528;
 $color-pink: #D61A69;
 $color-lightGray: #F2F3F4;
 $color-darkGray: #212529;
+$color-yellow: #F8D44D;
 
 
 
@@ -76,4 +79,52 @@ $html-font-size: 16px;
 }
 @function rem($pxValue) {
     @return #{math.div(stripUnit($pxValue), stripUnit($html-font-size))}rem;
+}
+
+@mixin general-transition{
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+}
+@mixin slow-transition{
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+}
+@mixin flexbox{
+    display: -webkit-box;      
+    display: -moz-box;         
+    display: -ms-flexbox;    
+    display: -webkit-flex;    
+    display: flex;  
+}
+@mixin border-radius($radius) {
+	border-radius: $radius;
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+}
+@mixin transform{
+    -webkit-transition: opacity .3s,-webkit-transform .5s var(--cubic);
+    -moz-transition: opacity .3s,transform .5s var(--cubic);
+    -ms-transition: opacity .3s,transform .5s var(--cubic);
+    -o-transition: opacity .3s,transform .5s var(--cubic);
+    transition: opacity .3s,transform .5s var(--cubic),-webkit-transform .5s var(--cubic);
+}
+@mixin transform-fast{
+    -webkit-transition: opacity .3s,-webkit-transform .3s;
+    -moz-transition: opacity .3s,transform .3s;
+    -ms-transition: opacity .3s,transform .3s;
+    -o-transition: opacity .3s,transform .3s;
+    transition: opacity .3s,transform .3s,-webkit-transform .3s;
+}
+@mixin delay($value){
+    -moz-transition-delay: $value;
+    -ms-transition-delay: $value;
+    -o-transition-delay: $value;
+    -webkit-transition-delay: $value;
+    transition-delay: $value;
 }

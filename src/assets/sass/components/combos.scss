@@ -4,18 +4,22 @@
 
 .combos{
     background: rgb(255,255,255);
-    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,209,166,1) 50%, rgba(255,255,255,1) 100%);
+    background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,209,166,1) 50%, rgba(255,255,255,0) 100%);
     padding-bottom: 60px;
-    overflow: hidden;
+    overflow:visible;
+    position: relative;
 
     //Overwrite Slick 
     .slick-initialized .slick-slide{
         display: flex;
+        img{
+            width: 114px;
+        }
     }
 
     .slick-next:before, .slick-prev:before{
         content: '';
-        background: url('../../images/slider-arrow.svg') no-repeat left top;
+        background: url('./../images/slider-arrow.svg') no-repeat left top;
         height: 63px;
         width: 63px;
         display: block;
@@ -31,8 +35,14 @@
     }
     //
 
-    .combos-background{
-        background: url('../../images/background_rocket.svg') no-repeat left bottom;
+    // .combos-background{
+    //     background: url('./../images/background_rocket.svg') no-repeat left bottom;
+    // }
+    .rocket{
+        position: absolute;
+        bottom:10%;
+        left:-10%;
+        pointer-events: none;
     }
 
     &-tabs{
@@ -51,7 +61,6 @@
             padding-top: 3px;
             margin-right: 20px;
             cursor: pointer;
-
             &.active{
                 background: $color-purple;
                 color: $color-white;
@@ -125,7 +134,7 @@
             top: 0;
             left: 0;
             width: 100%;
-            border-radius: 40px 40px 0 0;
+            border-radius: 38px 38px 0 0;
             height: 70px;
             padding-top: rem(23px);
             text-align: center;
@@ -159,7 +168,7 @@
                 font-size: rem(14px);
                 line-height: rem(34px);
                 padding-left: 30px;
-                background: url('../../images/bullets_check.svg') no-repeat left center;
+                background: url('./../images/bullets_check.svg') no-repeat left center;
             }
         }
 
@@ -171,7 +180,7 @@
                 text-align: center;
                 font-size: rem(13px);
                 line-height: rem(20px);
-                margin-bottom: rem(13px);
+                margin-bottom: rem(8px);
             }
         }
 
@@ -194,15 +203,40 @@
         }
 
         .cta{
-            display: flex;
+            @include flexbox;
             align-items: center;
-            padding-left: 23px;
+            justify-content: space-around;
             width: 140px;
             height: 43px;
             border-radius: 10px;
             color: $color-white;
             font-size: rem(14px);
-            background: $color-purple url('../../images/icon_arrow-right.svg') no-repeat right 22px center;
+            background: $color-purple;
+                @include transform;
+                img{
+                    max-width: 12px;
+                    width: auto !important;
+                    @include transform;
+                    -webkit-transform: translateX(0);
+                    -moz-transform: translateX(0);
+                    -ms-transform: translateX(0);
+                    -o-transform: translateX(0);
+                    transform: translateX(0);
+                }
+                &:hover{
+                    -webkit-transform: scale(1.05);
+                    -moz-transform: scale(1.05);
+                    -ms-transform: scale(1.05);
+                    -o-transform: scale(1.05);
+                    transform: scale(1.05);
+                    img{
+                        -webkit-transform: translateX(7px);
+                        -moz-transform: translateX(7px);
+                        -ms-transform: translateX(7px);
+                        -o-transform: translateX(7px);
+                        transform: translateX(7px);
+                    }
+                }
         }
 
         .disclaimer{

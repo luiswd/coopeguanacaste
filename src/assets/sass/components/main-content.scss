@@ -6,13 +6,27 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: $text;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $text-medium;
+}
+// h2{
+//     font-family: $text-bold;
+// }
+
+p,a,span,li{
+    font-family: $text;
 }
 
 a{
     text-decoration: none;
 }
-
-
 .wrapper{
-    padding: 0 2vw;
+    padding: 0 1vw;
+    box-sizing: border-box;
+}
+.warning{
+    display: none;
 }

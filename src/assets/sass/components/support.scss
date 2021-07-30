@@ -40,7 +40,7 @@
             margin-bottom: rem(18px);
 
             strong{
-                font-family: 'gt_walsheim_probold';
+                font-family: $text-bold;
             }
         }
 
@@ -61,7 +61,7 @@
                 position: absolute;
                 top: 6px;
                 right: 0;
-                background: url('../../images/arrow-top.svg') no-repeat right top;
+                background: url('./../images/arrow-top.svg') no-repeat right top;
                 transform: rotate(180deg);
             }
         }

@@ -6,7 +6,7 @@
     &Box{
         margin-bottom: rem(20px);
         margin-top: rem(20px);
-        background: $color-lightGray;
+        background: rbga(255,255,255,0.7);
         border-radius: 40px;
         padding: rem(70px) 3.5vw;
         border: 1px solid $color-black;
@@ -30,9 +30,47 @@
             align-items: flex-start;
             align-content: center;
             align-self: flex-start;
-    
-            img{
-                width: auto;
+            svg{
+                circle{
+                    @include general-transition;
+                    opacity: 0;
+                    filter: blur(6px);
+                    &:nth-child(3){
+                        @include delay(0.1s);
+                    }
+                    &:nth-child(4){
+                        @include delay(0.2s);
+                    }
+                    &:nth-child(5){
+                        @include delay(0.3s);
+                    }
+                    &:nth-child(6){
+                        @include delay(0.4s);
+                    }
+                    &:nth-child(7){
+                        @include delay(0.5s);
+                    }
+                    &:nth-child(8){
+                        @include delay(0.6s);
+                    }
+                    &:nth-child(9){
+                        @include delay(0.7s);
+                    }
+                    &:nth-child(10){
+                        @include delay(0.8s);
+                    }
+                    &:nth-child(11){
+                        @include delay(0.9s);
+                    }
+                    &:nth-child(12){
+                        @include delay(1s);
+                    }
+                }
+                &:hover{
+                    circle{
+                        fill:$color-purple;
+                    }
+                }
             }
         }
         &-right{
@@ -53,7 +91,7 @@
             }
 
             input{
-                background: $color-lightGray url('../../images/search.svg') no-repeat right 22px center;
+                background: $color-lightGray url('./../images/search.svg') no-repeat right 20px center;
                 border: 1px solid $color-black;
                 border-radius: 10px;
                 width: 414px;
@@ -62,7 +100,7 @@
                 padding-left: 18px;
                 text-transform: uppercase;
                 margin-bottom: rem(28px);
-
+                background-size: 22px;
                 &::placeholder{
                     color: $color-black;
                 }
@@ -79,7 +117,7 @@
                 margin-bottom: rem(40px);
                 li{
                     padding-left: 25px;
-                    background: url('../../images/results-pin.svg') no-repeat left center;
+                    background: url('./../images/results-pin.svg') no-repeat left center;
                     margin-bottom: 10px;
                 }
             }

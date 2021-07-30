@@ -1,14 +1,16 @@
 $(document).ready(function () {
     $('.promo-slider-slick').slick({
-        infinite: true,
         slidesToShow: 1,
         dots: true,
         infinite: false,
-        arrows: false
+        arrows: false,
+        fade: true,
+        cssEase: 'linear',
+        autoplay: true,
+        autoplaySpeed: 2000,
     })
 
     $('.combo-slider-slick').slick({
-        infinite: true,
         slidesToShow: 3,
         slidesToScroll: 3,
         infinite: false
