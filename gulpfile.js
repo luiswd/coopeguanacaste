@@ -64,6 +64,13 @@ function vendor(cb) {
     cb();
 }
 
+// Fonts
+function fonts(cb) {
+    gulp.src("src/assets/fonts/*")
+        .pipe(gulp.dest("dist/fonts/"));
+    cb();
+}
+
 // Compile Sass
 function css(cb) {
     gulp.src("src/assets/sass/*.scss")
@@ -125,4 +132,4 @@ function watch_files() {
 exports.default = series(nunjucks, css, js, vendor, imageMin, watch_files);
 
 // 'gulp build' will build all assets but not run on a local server.
-exports.build = parallel(nunjucksMinify, css, js, vendor, imageMin);
+exports.build = parallel(nunjucksMinify, css, js, vendor, imageMin, fonts);
